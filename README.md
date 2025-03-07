@@ -1,8 +1,12 @@
-# Neovimugicha  
-Neovim distro since I don't want to configure it everywhere separately, comes with it's own theme **based theme**
+# Nvim L-ed 
+Neovim Lizard Edition, By Reptiles For Reptiles
+Comes with it's own theme **based theme**
 
 ## Install  
-Global dependencies for **Arch** or **Gentoo**:  
+Global dependencies for **Arch** or **Gentoo**: 
+Note that these dependecy requirements are pretty easy to fulfill on any distro, this is just what I use. 
+
+Most issues will arise from the texlive package and I suggest you pull the most complete version of it on debian, nixOS, centOS.. etc. Pull the whole group if thats how your package manager of choice works...   
 
 **Arch:**  
 ```sh
@@ -39,7 +43,7 @@ sudo emerge -av app-editors/neovim \
 Once you have the global deps run this
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/neovimugicha/master/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/Nvim-L-ed/master/setup.sh)"
 ```
 
 To delete the configuration for uninstall or before install if any nvim dotfiles exist 
