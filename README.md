@@ -12,13 +12,8 @@ sudo pacman -S neovim \
                unzip \
                ripgrep \
                fd \
-               texlive-binextra \
-               texlive-latex \
-               texlive-latexextra \
-               texlive-latexrecommended \
-               texlive-mathscience \
-               texlive-fontsextra \
-               zathura \
+               texlive \
+               mupdf \
                git \
                github-cli
 ```
@@ -26,13 +21,15 @@ sudo pacman -S neovim \
 
 **Gentoo:**
 ```sh
+echo "app-text/texlive extra science xetex luatex metapost tex4ht texi2html truetype xml png" | sudo tee -a /etc/portage/package.use/texlive
+
 sudo emerge -av app-editors/neovim \
                net-libs/nodejs \
                app-arch/unzip \
                sys-apps/ripgrep \
                sys-apps/fd \
                app-text/texlive \
-               app-text/zathura \
+               app-text/mupdf \
                dev-vcs/git \
                dev-util/github-cli
  

@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
 
-# Ensure we're in the home directory
+# ensure we're in the home directory
 cd "$HOME"
 
-GITHUB_REPO="https://github.com/Jason-Goon/neovimugicha.git"
+GITHUB_REPO="https://github.com/Jason-Goon/Nvim-L-ed.git"
 BRANCH="master"
 
 CONFIG_DIR="$HOME/.config/nvim"
@@ -12,49 +12,51 @@ LAZY_DIR="$HOME/.local/share/nvim/lazy"
 MATH_TEMPLATE_DIR="$CONFIG_DIR/math-templates"
 THEME_PATH="$CONFIG_DIR/lua/themes"
 
-echo "                                                                                                "
-echo " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗██╗   ██╗ ██████╗ ██╗ ██████╗██╗  ██╗ █████╗ "
-echo " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║██║   ██║██╔════╝ ██║██╔════╝██║  ██║██╔══██╗"
-echo " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║██║   ██║██║  ███╗██║██║     ███████║███████║"
-echo " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║██║   ██║██║   ██║██║██║     ██╔══██║██╔══██║"
-echo " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║╚██████╗██║  ██║██║  ██║"
-echo " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝"
-echo "                                                                                                "
+echo "  __    __             __                      __                          __  "
+echo " |  \  |  \           |  \                    |  \                        |  \ "
+echo " | $$\ | $$ __     __  \$$ ______ ____        | $$          ______    ____| $$ "
+echo " | $$$\| $$|  \   /  \|  \|      \    \       | $$ ______  /      \  /      $$ "
+echo " | $$$$\ $$ \$$\ /  $$| $$| $$$$$$\$$$$\      | $$|      \|  $$$$$$\|  $$$$$$$ "
+echo " | $$\$$ $$  \$$\  $$ | $$| $$ | $$ | $$      | $$ \$$$$$$| $$    $$| $$  | $$ "
+echo " | $$ \$$$$   \$$ $$  | $$| $$ | $$ | $$      | $$_____   | $$$$$$$$| $$__| $$ "
+echo " | $$  \$$$    \$$$   | $$| $$ | $$ | $$      | $$     \   \$$     \ \$$    $$ "
+echo "  \$$   \$$     \$     \$$ \$$  \$$  \$$       \$$$$$$$$    \$$$$$$$  \$$$$$$$ "
+echo "                                                                               "
 
-echo "Checking for a clean Neovim environment..."
+echo "checking for a clean neovim environment..."
 if [ -d "$CONFIG_DIR" ]; then
-    echo "Error: $CONFIG_DIR already exists. Please remove the existing configuration first."
+    echo "error: $CONFIG_DIR already exists. please remove the existing configuration first."
     exit 1
 fi
 
-echo "Proceeding with a clean install..."
+echo "proceeding with a clean install..."
 
-# Create necessary directories
+# create necessary directories
 mkdir -p "$CONFIG_DIR/lua/themes"
 mkdir -p "$LAZY_DIR"
 
-# Clone Neovim configuration into a temporary folder
-echo "Cloning Neovim configuration from GitHub..."
-git clone --depth=1 --branch "$BRANCH" "$GITHUB_REPO" "$HOME/neovimugicha"
+# clone neovim configuration into a temporary folder
+echo "cloning neovim configuration from github..."
+git clone --depth=1 --branch "$BRANCH" "$GITHUB_REPO" "$HOME/Nvim-L-ed"
 
-# Copy configuration files into ~/.config/nvim/
-echo "Copying configuration files into place..."
-cp -r "$HOME/neovimugicha/lua/"* "$CONFIG_DIR/lua/"
-cp "$HOME/neovimugicha/lua/init.lua" "$CONFIG_DIR/init.lua"
-cp -r "$HOME/neovimugicha/math-templates" "$MATH_TEMPLATE_DIR"
+# copy configuration files into ~/.config/nvim/
+echo "copying configuration files into place..."
+cp -r "$HOME/Nvim-L-ed/lua/"* "$CONFIG_DIR/lua/"
+cp "$HOME/Nvim-L-ed/lua/init.lua" "$CONFIG_DIR/init.lua"
+cp -r "$HOME/Nvim-L-ed/math-templates" "$MATH_TEMPLATE_DIR"
 
-# Copy ASCII Art to config
-echo "Copying ASCII Art..."
-cp "$HOME/neovimugicha/asciiart.txt" "$CONFIG_DIR/asciiart.txt"
-echo "✓ ASCII Art copied successfully."
+# copy ascii art to config
+echo "copying ascii art..."
+cp "$HOME/Nvim-L-ed/asciiart.txt" "$CONFIG_DIR/asciiart.txt"
+echo "✓ ascii art copied successfully."
 
-echo "✓ Configuration files copied successfully."
+echo "✓ configuration files copied successfully."
 
-# Remove the temporary cloned repo
-rm -rf "$HOME/neovimugicha"
+# remove the temporary cloned repo
+rm -rf "$HOME/Nvim-L-ed"
 
-# Check for system dependencies
-echo "Checking system dependencies..."
+# check for system dependencies
+echo "checking system dependencies..."
 MISSING_PACKAGES=""
 for pkg in latexmk zathura node npm unzip ripgrep fd; do
     if ! command -v "$pkg" >/dev/null 2>&1; then
@@ -63,27 +65,27 @@ for pkg in latexmk zathura node npm unzip ripgrep fd; do
 done
 
 if [ -n "$MISSING_PACKAGES" ]; then
-    echo "⚠ Warning: The following dependencies are missing: $MISSING_PACKAGES"
-    echo "Please install them manually before running Neovim."
+    echo "⚠ warning: the following dependencies are missing: $MISSING_PACKAGES"
+    echo "please install them manually before running neovim."
 else
-    echo "✓ All necessary dependencies are installed."
+    echo "✓ all necessary dependencies are installed."
 fi
 
-# Install lazy.nvim if not present
+# install lazy.nvim if not present
 LAZY_PATH="$LAZY_DIR/lazy.nvim"
 if [ ! -d "$LAZY_PATH" ]; then
-    echo "Installing lazy.nvim..."
+    echo "installing lazy.nvim..."
     git clone --filter=blob:none https://github.com/folke/lazy.nvim.git "$LAZY_PATH"
     echo "✓ lazy.nvim installed."
 else
     echo "✓ lazy.nvim already installed, skipping..."
 fi
 
-# Install Neovim plugins
-echo "Installing Neovim plugins..."
+# install neovim plugins
+echo "installing neovim plugins..."
 nvim --headless "+Lazy sync" +qall
-echo "✓ Neovim plugins installed successfully."
+echo "✓ neovim plugins installed successfully."
 
 echo "──────────────────────────────────────────────────────────"
-echo "Installation complete. Launch Neovim and start coding!"
+echo "installation complete. launch neovim and start coding!"
 echo "──────────────────────────────────────────────────────────"
