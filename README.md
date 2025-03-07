@@ -6,6 +6,7 @@ Comes with it's own theme **based theme**
     <img src="Nvim-L-ed-logo.png" alt="Nvim-L-ed Logo" width="300">
     <img src="telescope.png" alt="Telescope View" width="300">
     <img src="treeview.png" alt="Tree View" width="300">
+    <img src="mason.png" alt="Tree View" width="300">
 </div>
 
 
