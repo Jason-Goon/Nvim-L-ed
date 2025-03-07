@@ -2,23 +2,11 @@
 Neovim Lizard Edition, By Reptiles For Reptiles
 Comes with it's own theme **based theme**
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-    <div style="text-align: center;">
-        <img src="Nvim-L-ed-logo.png" alt="Nvim-L-ed Logo" width="300">
-        <p><b>Nvim-L-ed Logo</b></p>
-    </div>
-    <div style="text-align: center;">
-        <img src="telescope.png" alt="Telescope View" width="300">
-        <p><b>Telescope View</b></p>
-    </div>
+<div align="center">
+    <img src="Nvim-L-ed-logo.png" alt="Nvim-L-ed Logo" width="300">
+    <img src="telescope.png" alt="Telescope View" width="300">
+    <img src="treeview.png" alt="Tree View" width="300">
 </div>
-<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-    <div style="text-align: center;">
-        <img src="treeview.png" alt="Tree View" width="300">
-        <p><b>Tree View</b></p>
-    </div>
-</div>
-
 
 
 ## Install  
