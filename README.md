@@ -43,13 +43,13 @@ sudo emerge -av app-editors/neovim \
 Once you have the global deps run this
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/Nvim-L-ed/master/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/gen2-acidking/Nvim-L-ed/master/setup.sh)"
 ```
 
 To delete the configuration for uninstall or before install if any nvim dotfiles exist 
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/neovimugicha/master/cleanup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/gen2-acidking/Nvim-L-ed/master/cleanup.sh)"
 ```
 
 
