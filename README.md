@@ -1,5 +1,6 @@
 # Nvim L-ed 
 Neovim Lizard Edition, By Reptiles For Reptiles
+
 Comes with it's own theme **based theme**
 
 <div align="center">
