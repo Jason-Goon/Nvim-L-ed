@@ -70,7 +70,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gen2-acidking/Nvim-L-ed/ma
 - **LSP support** – Rust, C, C++, Python, TypeScript, HTML, CSS  
 - **Git/ copilot integration**  
 - **Based Theme**  
-- **LaTeX support with vimtex** – Live preview via Zathura  
+- **LaTeX support with vimtex** – Live preview via mupdf
 - **GitHub Copilot integration** – `<Space>co` to toggle  
 - **ASCII art start screen**  
 - **Quick project setup for Math, Notes, and Assignments**  
