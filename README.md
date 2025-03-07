@@ -2,6 +2,10 @@
 Neovim Lizard Edition, By Reptiles For Reptiles
 Comes with it's own theme **based theme**
 
+<img src="Nvim-L-ed-logo.png" alt="Nvim-L-ed Logo" width="300">
+<img src="telescope.png" alt="Telescope View" width="300">
+<img src="treeview.png" alt="Tree View" width="300">
+
 ## Install  
 Global dependencies for **Arch** or **Gentoo**: 
 Note that these dependecy requirements are pretty easy to fulfill on any distro, this is just what I use. 
