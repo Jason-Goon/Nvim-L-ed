@@ -49,6 +49,27 @@ require("nvim-tree").setup({
 -- bind <leader>e (space + e) to toggle nvimtree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
+-- telescope search setup
+local telescope = require("telescope")
+telescope.setup({
+    defaults = {
+        file_ignore_patterns = {"node_modules", "%.git/"},
+        mappings = {
+            i = {
+                ["<C-u>"] = false,
+                ["<C-d>"] = false,
+            },
+        },
+    }
+})
+
+-- bind <leader>f (space + f) to open telescope find files
+vim.keymap.set("n", "<leader>f", ":Telescope find_files<CR>", { noremap = true, silent = true })
+
+-- bind <leader>g (space + g) to open telescope live grep
+vim.keymap.set("n", "<leader>g", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+
+
 -- toggle copilot
 vim.api.nvim_set_keymap("n", "<leader>co", ":Copilot status<CR>", { noremap = true, silent = true })
 

@@ -74,6 +74,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/neovimugicha/ma
 - `<Space>q` → Close buffer  
 - `<Space>w` → Save file  
 - `<Space>co` → Toggle GitHub Copilot  
+- `<Space>f` → Find files (Telescope)  
+- `<Space>g` → Live grep (Telescope)  
 - `:NewMathProject <name>` → Create a new Math project  
 - `:NewNotes <name>` → Create a new Notes project  
 - `:NewAssignment <name>` → Create a new Assignment project  
