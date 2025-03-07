@@ -1,0 +1,81 @@
+% Document Class (Report style)
+\documentclass{report}
+
+% Import preamble, macros, and font settings
+\input{preamble}  
+\input{macros}    
+\input{letterfonts} 
+
+% Title Page Configuration
+\title{\Huge{Class / Assignment Title}\\Assignment Week / Problem Set}
+\author{
+    \huge{Santeri Aaltonen} \\[1em]  
+    Student Number: 150382131 \\[3em]  
+    \textit{\huge{Created with Nvim L-ed}} \\[1em]  
+    \textit{\huge{Maintained by me}} \\[1em]  
+    \texttt{\huge{https://github.com/gen2-acidking/Nvim-L-ed}}  
+}
+
+\begin{document}
+
+% Generate title page
+\maketitle
+
+% Table of Contents (with PDF bookmarking)
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak 
+
+% -----------------------------
+% Notes Section
+% -----------------------------
+\chapter{Notes}  % Main section for lecture notes or study materials
+
+% Example Note Section
+\section{Example Note}
+
+% Definition Example
+\dfn{Definition Name}{This is an example definition. You can write mathematical notations like $\lim_{n \to \infty} a_n = L$.}
+
+% Example Question
+\qs{Example Question}{Prove that $1 + 1 = 2$.}
+% Example Solution
+\sol{By Peano arithmetic, we have... (write proof here)}
+
+% Important Remark
+\nt{Example Remark}{This is an important note regarding the subject.}
+
+% -----------------------------
+% Assignment Section
+% -----------------------------
+\chapter{Assignments}  % Section for homework and problem sets
+
+% Example Problem Set
+\section{Problem Set}
+
+% Example Math Problem 1
+\qs{Problem 1}{Solve $x^2 - 4x + 4 = 0$.}
+\sol{By factoring, we get $(x - 2)(x - 2) = 0$ so $x = 2$.}
+
+% Example Math Problem 2
+\qs{Problem 2}{Show that a continuous function on a closed interval is bounded.}
+\sol{By the Weierstrass theorem, every continuous function on $[a,b]$ attains a maximum and minimum.}
+
+% -----------------------------
+% Assignment Section
+% -----------------------------
+\chapter{Assignments}  % Section for homework and problem sets
+
+% Example Problem Set
+\section{Problem Set}
+
+% Example Math Problem 1
+\qs{Problem 1}{Solve $x^2 - 4x + 4 = 0$.}
+\sol{By factoring, we get $(x - 2)(x - 2) = 0$ so $x = 2$.}
+
+% Example Math Problem 2
+\qs{Problem 2}{Show that a continuous function on a closed interval is bounded.}
+\sol{By the Weierstrass theorem, every continuous function on $[a,b]$ attains a maximum and minimum.}
+
+
+\end{document}

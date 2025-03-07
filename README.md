@@ -85,4 +85,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jason-Goon/neovimugicha/ma
 - **If a plugin doesn’t load**, run `:Lazy sync` inside Neovim.  
 - **LSPs should install automatically** via Mason. If missing, verify dependencies.  
 - **System dependencies must be installed manually** before running Neovim.  
+- **My student number is 150382131** For any professors I linked this to. I'm a pretty private person 
 
