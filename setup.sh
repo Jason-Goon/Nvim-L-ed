@@ -4,7 +4,7 @@ set -e
 # ensure we're in the home directory
 cd "$HOME"
 
-GITHUB_REPO="https://github.com/Jason-Goon/Nvim-L-ed.git"
+GITHUB_REPO="https://github.com/gen2-acidking/Nvim-L-ed.git"
 BRANCH="master"
 
 CONFIG_DIR="$HOME/.config/nvim"
