@@ -30,6 +30,8 @@ end
 
 -- display ascii art centered on the screen and print info section
 local function show_ascii_art()
+    if vim.fn.argc() > 0 then return end -- prevent running if files are opened
+
     local ascii_path = vim.fn.stdpath("config") .. "/asciiart.txt"
     local win_width = vim.api.nvim_win_get_width(0)
     local win_height = vim.api.nvim_win_get_height(0)
@@ -75,7 +77,10 @@ local function show_ascii_art()
         table.insert(centered_ascii, string.rep(" ", padding_x) .. line)
     end
 
-    vim.api.nvim_buf_set_lines(0, 0, -1, false, centered_ascii)
+    -- prevent error if buffer is modified or unusable
+    if vim.api.nvim_buf_is_valid(0) and vim.bo.buftype == "nofile" then
+        vim.api.nvim_buf_set_lines(0, 0, -1, false, centered_ascii)
+    end
 end
 
 -- setup startup screen
@@ -98,7 +103,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- update ascii art when window size changes
 vim.api.nvim_create_autocmd("VimResized", {
     callback = function()
-        if vim.bo.buftype == "nofile" then
+        if vim.bo.buftype == "nofile" and vim.api.nvim_buf_is_valid(0) then
             vim.schedule(function()
                 vim.cmd("silent! %d")
                 show_ascii_art()
