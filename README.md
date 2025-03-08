@@ -98,3 +98,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gen2-acidking/Nvim-L-ed/ma
 - **System dependencies must be installed manually** before running Neovim.  
 - **My student number is 150382131** For any professors I linked this to. I'm a pretty private person 
 
+## License  
+This theme is released under the [MIT License](./LICENSE).  
+
+
